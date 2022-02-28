@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/ec0b2e11bc.js" crossorigin="anonymous"></script>
+    <!-- bootstrap css cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Piggy Bank 💰</title>
+</head>
+<body>
+    <!-- title -->
+    <header class="container">
+        <h1 class="heading">Piggy Bank 💰</h1>
+    </header>
+    <main>
+        <!-- main div start from here -->
+        <section class="piggy-bank">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-6">
+                      <!-- left side images -->
+                    <div class="bank-image">
+                        <img src="./imges/bank.jpg" alt="" class="imgSize img-fluid">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                      <!-- right side inputs  -->
+                    <div class="money-input p-5 justify-content-start">
+                        <div class="title text-center">
+                            <h4>Income</h4>
+                        </div>
+                        <!-- income input -->
+                        <div class="mb-3 d-flex align-items-center justify-content-center ">
+                            <label for="income" class="form-label px-3">Income:</label>
+                            <input type="number" class="form-control" id="income" placeholder="Enter Your income ">
+                            <p id="incomeError" class="error"></p>
+                        </div>
+                        <div class="title text-center">
+                            <h4>Expenses</h4>
+                        </div>
+                        <div class="mb-3 d-flex align-items-center justify-content-center ">
+                               <!-- food input -->
+                            <label for="food" class="form-label px-3">Food:</label>
+                            <input type="number" class="form-control" id="food" placeholder="Enter Your food" >
+                            <p id="foodError" class="error"></p>
+                        </div>
+                        <div class="mb-3 d-flex align-items-center justify-content-center ">
+                               <!-- rent input -->
+                            <label for="rent" class="form-label px-3">Rent:</label>
+                            <input type="number" class="form-control" id="rent" placeholder="Enter Your rent">
+                            <p id="rentError" class="error"></p>
+
+                        </div>
+                        <div class="mb-3 d-flex align-items-center justify-content-center ">
+                               <!-- Clothes input -->
+                            <label for="clothes" class="form-label px-1">Clothes:</label>
+                            <input type="number" class="form-control" id="clothes" placeholder="Enter Your clothes">
+                            <p id="clothesError" class="error"></p>
+                        </div>
+                        <div class="submit text-center py-3">
+                               <!-- calculate button -->
+                            <button type="button" id="calculate" class="btn btn-primary btn-lg ">Calculate</button>
+                        </div>
+                        <div class="total-amount text-center py-3">
+                            <!-- total amount -->
+                            <h4>Total Expenses: <span id="totalExpenses" class="error"></span> </h4>
+                            <h4>Balance: <span id="balanceAmount" class="error"></span></h4>
+                        </div>
+                        <div class="mb-3 d-flex align-items-center justify-content-center ">
+                            <label for="save" class="form-label px-3">Save:</label>
+                            <input type="number" class="form-control" id="saveInput" placeholder="Enter percentage">
+                            <span class="percentage"> % </span>
+                               <!-- Save button -->
+                           <button type="button" id="saveBtn" onclick="Save()" class="btn btn-primary btn-sm"> Save</button>
+                        </div>
+                        <!-- saving amount -->
+                        <div class="total-amount text-center py-3">
+                            <h4>Saving Amount: <span id="savingAmount" class="error"></span> </h4>
+                            <h4>Remaining Balance: <span id="remainingBalance" class="error"></span> </h4>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+          </div>
+        </section>
+    </main>
+       <!-- bootstrap js cdn -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
